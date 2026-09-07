@@ -23,3 +23,7 @@ This repo currently contains the static front end only. The layout and form are 
 ## Live demo
 
 https://aancaradu.github.io/persona-generator/
+
+## Design
+
+Original Figma design: https://www.figma.com/design/hB3SqXGoVUqSxlt3NFbvI3/8x8-CV?node-id=0-1&t=PuSz5yuJIpl4YWHl-1
