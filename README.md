@@ -22,4 +22,4 @@ This repo currently contains the static front end only. The layout and form are 
 
 ## Live demo
 
-[Add your GitHub Pages link here once it's published]
+https://aancaradu.github.io/persona-generator/
