@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UX Persona Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="form-hero.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Explora&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fonts -->
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-sm bg-sage text-wine py-sm-1 py-lg-2 sticky-top"
+    >
+      <div class="container">
+        <!-- container needed in header for alignment with footer -->
+        <a class="navbar-brand" href="index.html">
+          <img
+            class="img-fluid ms-1"
+            src="Logo3.5.2.png"
+            style="height: clamp(50px, 8vw, 70px); width: auto"
+            alt="UX Persona Generator Logo"
+          />
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler w-8 me-3"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseNav"
+        >
+          <!-- data-bs-toggle=toggle - button will control something that collapses -->
+          <!-- data-bs-target=#collapsibleNav -  points to the thing to be collapsed. -->
+          <svg
+            fill="#87352e"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 50 50"
+            xml:space="preserve"
+            width="20"
+            height="20"
+          >
+            <g>
+              <rect y="4" width="50" height="2" />
+              <rect y="22" width="50" height="2" />
+              <rect y="40" width="50" height="2" />
+            </g>
+          </svg>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="collapseNav"
+        >
+          <!-- justify content works because navbar collapse makes the component display:flex -->
+          <!-- used id collapseNav for the button AND with .show in CSS to add padding to iit -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link pe-sm-3 pe-md-5" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="container-fluid hero d-flex flex-row">
+      <!-- we need the hero class and for it to be flex in order to make the section content 
+       stay in the middle vertically when resizing screen -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 column1 d-flex flex-column flex-section">
+            <input
+              type="text"
+              id="form-1"
+              name="name"
+              placeholder="NAME (OPTIONAL):"
+            />
+            <select type="dropdown" id="form-2" name="name">
+              <option value="" selected disabled hidden>
+                GENDER (OPTIONAL)
+              </option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <select type="dropdown" id="form-3" name="name">
+              <option value="" selected disabled hidden>
+                AGE RANGE (YEARS)
+              </option>
+              <option value="range1">0-14</option>
+              <option value="range2">14-17</option>
+              <option value="range3">18-30</option>
+              <option value="range4">31-45</option>
+              <option value="range5">45-58</option>
+              <option value="range6">58-70</option>
+              <option value="range7">70-82</option>
+              <option value="range8">>83</option>
+            </select>
+
+            <select type="dropdown" id="form-4" name="name">
+              <option value="" selected disabled hidden>OCCUPATION</option>
+              <option value="occupation1">Student</option>
+              <option value="occupation2">Teacher</option>
+              <option value="occupation3">Engineer</option>
+              <option value="occupation4">Designer</option>
+              <option value="occupation5">Developer</option>
+              <option value="occupation6">Manager</option>
+              <option value="occupation7">Healthcare Professional</option>
+              <option value="occupation8">Salesperson</option>
+              <option value="occupation9">Writer</option>
+              <option value="occupation10">Constructor</option>
+              <option value="occupation11">Firefighter</option>
+              <option value="occupation12">Other</option>
+            </select>
+
+            <select type="dropdown" id="form-5" name="name">
+              <option value="" selected disabled hidden>DESIGN PURPOSE</option>
+              <option value="purpose1"></option>
+              <option value="purpose2"></option>
+              <option value="purpose3"></option>
+              <option value="purpose4"></option>
+              <option value="purpose5"></option>
+              <option value="purpose6"></option>
+              <option value="purpose7"></option>
+              <option value="purpose8"></option>
+              <option value="purpose9"></option>
+              <option value="purpose10"></option>
+              <option value="purpose11"></option>
+              <option value="purpose12">Other</option>
+            </select>
+            <select type="dropdown" id="form-6" name="name">
+              <option value="" selected disabled hidden>
+                EXPERIENCE LEVEL
+              </option>
+              <option value="experience1">Beginner</option>
+              <option value="experience2">Intermediate</option>
+              <option value="experience3">Advanced</option>
+              <option value="experience4">Professional</option>
+            </select>
+            <select type="dropdown" id="form-7" name="name">
+              <option value="" selected disabled hidden>TECH LEVEL</option>
+              <option value="tech1">Beginner</option>
+              <option value="tech2">Intermediate</option>
+              <option value="tech3">Advanced</option>
+              <option value="tech4">Professional</option>
+            </select>
+          </div>
+          <div class="col-sm-8 d-flex flex-column flex-section">
+            <h1 class="text-wine2">UX Persona Generator</h1>
+
+            <button
+              id="generate-btn"
+              class="btn section-button align-self-start"
+            >
+              <!-- align-self-start because in a flex container with flex-direction: column, 
+           children automatically get align-self: stretch and span the whole width of vp-->
+              <span class="section-button-text text-wine2"
+                >Complete Form & Generate Persona</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container-fluid footer-div bg-grey pt-3">
+      <div class="container">
+        <!-- container needed in footer for alignment with header -->
+        <div class="row footer-row align-items-stretch">
+          <div class="col-6 individual-col d-flex flex-column">
+            <div class="leftcol-top">
+              <!-- first row -->
+              <div>
+                <h1 class="text-white">UX Persona Generator</h1>
+              </div>
+              <!-- second row  containing a flex div with 2 links and a vertical separator -->
+              <div>
+                <div class="d-none d-md-flex w-100 align-items-center">
+                  <a href="index.html" class="link">Home</a>
+                  <span class="text-white separator">|</span>
+                  <a href="about.html" class="link2">About</a>
+                </div>
+              </div>
+              <!--x eliminated third .row because the icons wouldn't be responsive (i couldn't make them resize) so i had to put all three <a> in 
+  a single col div and then a flex-row div and make them responsive using css, where i defined the class footer-icon and used in in queries-->
+
+              <div>
+                <div
+                  class="icons-set d-flex flex-row gap-1 gap-sm-2 gap-md-3 pt-0 pt-md-5 align-items-center"
+                >
+                  <a href="mailto:ancaradu0002@gmail.com">
+                    <svg
+                      class="icon footer-icon"
+                      fill="#ddb892"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 1 24.5 24"
+                    >
+                      <path
+                        d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a href="https://github.com/aancaradu">
+                    <svg
+                      class="icon footer-icon"
+                      fill="#ddb892"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 1 24.5 24"
+                    >
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a href="https://www.linkedin.com/in/anca-valentina-radu">
+                    <!-- class footer-icon needs to be in svg element (where i wrote the width and height), in order to make the svg's rescalable and not need width and height in html -->
+                    <svg
+                      class="icon footer-icon"
+                      fill="#ddb892"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 1 24.5 24"
+                    >
+                      <path
+                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-6 individual-col d-flex flex-column text-end gap-custom pt-5"
+          >
+            <div class="rightcol-top">
+              <div>
+                <!-- small link div -->
+                <div
+                  class="d-flex d-md-none justify-content-end align-items-center"
+                >
+                  <a href="index.html" class="link">Home</a>
+                  <span class="text-white separator">|</span>
+                  <a href="about.html" class="link2">About</a>
+                </div>
+              </div>
+              <!-- large link div -->
+              <div class="footer-paragraphs justify-content-end pt-md-0">
+                <div class="paragraphs">
+                  <p class="footer-p">Did you enjoy our app?</p>
+                  <p class="footer-p">Any suggestions for improvement?</p>
+                  <p class="footer-p">Write them down below.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- large feedback section -->
+            <form>
+              <div class="d-none d-md-block">
+                <!-- d-md-block so that above md level it is shown -->
+                <input
+                  type="text"
+                  name="feedback"
+                  placeholder="Leave feedback..."
+                  class="feedback bg-grey"
+                />
+
+                <input
+                  type="submit"
+                  value="Send Feedback"
+                  class="submit-button"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- large copyright -->
+        <div class="row d-md-flex d-none flex-row">
+          <!-- deleted align-items-center from above, did not seem to do anything -->
+          <div class="col-6">
+            <!-- without col-6, it was misaligned -->
+            <div class="text-white font-raleway">
+              <p class="copyright">All Images And Original Text</p>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="text-white text-end font-raleway">
+              <p class="copyright">© 2025 Anca-Valentina Radu</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- small feedback section -->
+        <div class="row d-md-none d-block">
+          <div class="col-12">
+            <form>
+              <div class="position-relative">
+                <!-- relative in order to be able to put button inside it, 
+                 by making the field relative to the button location -->
+                <input
+                  type="text"
+                  name="feedback"
+                  placeholder="Leave feedback..."
+                  class="feedback-small bg-grey"
+                />
+
+                <input
+                  type="submit"
+                  value="Submit"
+                  class="btn btn-sm submit-button-small position-absolute end-0 top-50 translate-middle-y me-3"
+                />
+                <!-- end-0 = far right of the containing block
+                 top-50 = 50% from top of the parent (moves top edge of child to the middle of parent)
+                 translate-middle-y = pulls element up by 1/2 of its own height, centering it based on its middle -->
+              </div>
+            </form>
+
+            <!-- small copyright -->
+            <div class="row">
+              <div class="col-12">
+                <!-- without col-12, it was misaligned -->
+                <div class="text-white text-center font-raleway">
+                  <p class="copyright">
+                    All Images And Original Text © 2025 Anca-Valentina Radu
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

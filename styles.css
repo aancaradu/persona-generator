@@ -1,0 +1,476 @@
+/* SOME MARGINS AND PADDINGS ARE IN % BECAUSE I DO NOT WANT THEM 
+RELATIVE TO THE FONT SIZE, BUT TO THE PARENT ELEMENT'S WIDTH */
+
+body {
+  background-color: #fdf2dc;
+}
+
+/* --- COLORS --- */
+
+.bg-sage {
+  background-color: #a6b295;
+}
+.bg-grey {
+  background-color: #3e3e3e;
+}
+
+.text-wine {
+  color: #87352e;
+}
+
+.text-wine2 {
+  color: #984b44;
+}
+
+/* --- SIZING --- */
+
+.w-8 {
+  width: 8%;
+}
+
+.pt-4 {
+  padding-top: 16;
+}
+
+.gap-custom {
+  row-gap: 15px;
+}
+/* for the large part of footer, gap custom is between the paragraphs and feedback field AND in bw the feedback field and button,
+ in .submit-button, we have a margin-top of 2.6vh which fits best the gap custom 
+ (there is also some ghost padding bw p's and feedback field that i cannot get rid of)  */
+
+/* --- GROUP COLORS & FONTS --- */
+
+.footer-paragraphs,
+.link,
+.link2,
+.separator,
+.feedback,
+.feedback::placeholder,
+.feedback-small::placeholder,
+.submit-button,
+.submit-button-small,
+.submit-button-small:hover {
+  color: white;
+}
+
+.nav-link {
+  font-family: "Playfair Display", "Times New Roman", serif;
+}
+
+section h1,
+.section-button-text,
+.submit-button {
+  font-family: "DM Serif Display";
+}
+
+.section-text,
+.link,
+.link2,
+.separator,
+.footer-paragraphs,
+.feedback::placeholder,
+.feedback-small::placeholder,
+.submit-button-small,
+.copyright {
+  font-family: "Raleway", sans-serif;
+}
+
+footer h1 {
+  font-family: "Explora";
+}
+
+/* --- NAVBAR --- */
+
+.nav-link,
+.nav-link:hover,
+.navbar-toggler-icon {
+  color: #87352e;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+/* use nav-link:hover instead of a:hover bc bootstrap has a specific rule applied to nav-link */
+
+.navbar-toggler {
+  border: none;
+}
+
+/* --- SECTION --- */
+
+.hero {
+  min-height: 500px;
+  justify-content: center;
+}
+
+.flex-section {
+  /* justify-content: center; */
+  row-gap: 0.8em;
+  padding-block: clamp(4rem, 10vh, 10rem);
+}
+
+.section-text {
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  width: 35vw;
+  /* width of text box */
+}
+
+.section-button {
+  display: inline-flex;
+  /* inline flex bc align-items only works with flex containers, but we still need the button to be inline */
+  align-items: center;
+  background-color: rgb(166, 178, 149, 0.55);
+  box-shadow: inset 0 0.5px 1px rgba(0, 0, 0, 0.171),
+    /* top shadow  that spreads to sides evenly */ inset 0 -1px 2px rgba(255, 255, 255, 0.2);
+  /* bottom with small blur */
+  border-radius: 25px;
+  padding: 0.4em 1.2em;
+}
+
+.section-button:hover {
+  background-color: rgba(96, 107, 84, 0.345);
+}
+
+.section-button-text {
+  font-size: clamp(12px, 4vw, 1rem);
+}
+
+/* --- FOOTER --- */
+
+.footer-div {
+  border-top: 4px solid #a6b295;
+}
+
+.individual-col {
+  min-height: 350px;
+}
+
+footer h1 {
+  font-size: 4vw;
+}
+
+.footer-icon {
+  overflow: visible;
+}
+
+.link,
+.link2,
+.separator {
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.link {
+  padding-right: 1em;
+}
+
+.link2 {
+  padding-left: 1em;
+  /* padding-right: 0; ??????? don't think it does anything */
+}
+
+.footer-paragraphs {
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 8px;
+  padding-top: 20px;
+}
+
+.paragraphs p:last-child {
+  margin-bottom: 0px;
+  /* the p element has a margin applied, this one needs 0, so that the space under is not too big */
+}
+
+.copyright {
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.feedback,
+.feedback:focus,
+.feedback-small,
+.feedback-small:focus {
+  border: 1px solid #a6b295;
+}
+
+.feedback,
+.feedback-small {
+  display: block;
+  resize: none;
+  /* for the right-bottom corner resize lines */
+}
+
+.feedback:focus,
+.feedback-small:focus {
+  outline: none; /*  no browser outline */
+  box-shadow: 0 0 0 3px #a6b29560; /* soft green glow */
+}
+
+.feedback {
+  width: 80%;
+  height: 55px;
+  border-radius: 10px;
+  margin-top: 1.5vh;
+  margin-left: auto;
+}
+
+.feedback-small {
+  width: 100%;
+  height: 55px;
+  border-radius: 7px;
+}
+
+.feedback::placeholder {
+  font-size: 14px;
+  font-weight: 200;
+  padding-left: 1.5em;
+}
+
+.feedback-small::placeholder {
+  font-size: 13px;
+  font-weight: 200;
+  padding-left: 1em;
+}
+
+.submit-button,
+.submit-button-small {
+  background-color: rgba(166, 178, 149, 0.55);
+  border-radius: 25px;
+  border: none;
+}
+
+.submit-button:hover,
+.submit-button-small:hover {
+  background-color: rgba(206, 228, 174, 0.55);
+}
+
+.submit-button {
+  font-size: 17px;
+  /* margin-top: 2.5vh; */
+  margin-top: 2.6vh;
+  /* 2.6vh gets closer to the 15px of custom-gap bw the links and the paragraphs */
+  padding: 0.7em 1.5em;
+}
+
+.submit-button-small {
+  padding: 0.125em 2.5%;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 2560px) {
+  footer h1 {
+    font-size: 4.35vw;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 20px;
+  }
+  .footer-icon {
+    width: 30px;
+    height: 35px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  /* .hero {
+    min-height: 360px !important;
+  }
+
+  .flex-section {
+    padding-block: clamp(2rem, 5vh, 6rem);
+  } */
+
+  .section-text {
+    width: 70vw;
+    font-size: 16px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-div {
+    border-top: 3px solid #a6b295;
+  }
+
+  footer h1 {
+    font-size: 5.5vw;
+  }
+
+  .individual-col {
+    min-height: 160px;
+  }
+
+  .link,
+  .link2,
+  .separator {
+    font-size: 14px;
+  }
+
+  .footer-icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .footer-paragraphs {
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 3px;
+    padding-top: 23px;
+    /* padding top ~ equal to gap-custom, so that the spaces betweeen the footer links, 
+     paragraphs and feedback field are equal (made it bigger because it seemed smaller due to the taller letters */
+  }
+  /* padding-top for paragraphs and links AND row-gap for paragraphs and feedback bar */
+
+  .copyright {
+    font-size: 11px;
+    margin-top: 3em;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #collapseNav.show {
+    padding-top: 0.625em;
+  }
+
+  .individual-col {
+    min-height: 165px;
+  }
+
+  footer h1 {
+    font-size: 7vw;
+  }
+
+  .link,
+  .link2,
+  .separator {
+    font-size: 12px;
+  }
+
+  .link,
+  .link2 {
+    padding-right: 0.75em;
+  }
+
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer-paragraphs {
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 20px;
+  }
+
+  .gap-custom {
+    row-gap: 24px;
+  }
+
+  .footer-paragraphs p {
+    margin-bottom: 0em; /* controls vertical spacing between paragraphs */
+  }
+  /* the line-height between paragraphs (in footer-paragraphs) handles vertical spacing */
+}
+
+@media only screen and (max-width: 396px) {
+  section h1 {
+    font-size: clamp(20px, 7vw, 26px);
+  }
+
+  .section-text {
+    font-size: clamp(13px, 4vw, 15px);
+  }
+
+  .section-button {
+    padding: 0.02em 0.7em;
+  }
+
+  .individual-col {
+    min-height: 155px;
+  }
+
+  .footer-paragraphs {
+    font-size: 10px;
+    font-weight: 100;
+    padding-top: 18px;
+    /* padding-top for paragraphs and links AND gap-custom for paragraphs and feedback bar */
+  }
+
+  .gap-custom {
+    row-gap: 18px;
+  }
+
+  /* .footer-paragraphs p {
+    margin-bottom: 0em;}  */
+  /* controls vertical spacing between paragraphs */
+
+  .feedback-small {
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+  }
+
+  .submit-button-small {
+    font-size: 11px;
+    border-radius: 20px;
+    padding: 0.15em 4%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .individual-col {
+    min-height: 150px;
+  }
+
+  footer h1 {
+    font-size: 6.5vw;
+  }
+
+  .link,
+  .link2,
+  .separator {
+    font-size: 11px;
+  }
+
+  .footer-paragraphs {
+    font-size: 9px;
+    font-weight: 100;
+    line-height: 1.3;
+  }
+
+  .footer-paragraphs p {
+    margin-bottom: 1em;
+  }
+
+  .feedback-small::placeholder {
+    font-size: 11px;
+    padding-left: 1em;
+  }
+
+  .copyright {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 277px) {
+  .link,
+  .link2,
+  .separator {
+    font-size: 9px;
+  }
+
+  .footer-paragraphs {
+    font-size: 7px;
+    font-weight: 100;
+    line-height: 1.5;
+  }
+  .footer-paragraphs p {
+    margin-bottom: 1em; /* controls vertical spacing between paragraphs */
+  }
+}
