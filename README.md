@@ -1,6 +1,6 @@
 # UX Persona Generator
 
-A front end concept for a tool that turns quick inputs into structured UX personas. Originally designed in Figma as a personal project, then partially built using HTML, CSS, Bootstrap, and JavaScript.
+A front-end concept for a tool that turns quick inputs into structured UX personas. Originally designed in Figma as a personal project, then partially built using HTML, CSS, Bootstrap, and JavaScript.
 
 ## Purpose
 
